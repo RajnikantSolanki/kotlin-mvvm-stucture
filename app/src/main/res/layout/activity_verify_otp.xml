@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.example.kotlindemo.mvvm.verify_otp.VerifyOtpViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activities.VerifyOtpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.mukesh.OtpView
+            android:id="@+id/otpView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:viewType="rectangle"
+            app:lineColor="@android:color/transparent"
+            android:shadowColor="@color/grey_600"
+            android:itemBackground="@color/white"
+            android:shadowRadius="@integer/anim_length_half"
+            app:itemRadius="@dimen/_10sdp"
+            app:itemSpacing="@dimen/_10sdp"
+            app:itemCount="4"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btnVerifyOtp"
+            android:text="Verify Otp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</layout>
